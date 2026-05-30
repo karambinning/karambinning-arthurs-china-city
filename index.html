@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arthurs China City — Chinese takeaway · Desborough Road, High Wycombe</title>
+<meta name="description" content="Arthurs China City. Long-standing Chinese takeaway on Desborough Road, High Wycombe. Sweet &amp; sour pork balls, chicken chow mein, the lot. Open Thursday to Tuesday, evenings.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400;9..144,700;9..144,900&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0C0908;
+  --paper:#F4EBDD;
+  --paper-warm:#E9DDC8;
+  --magenta:#D52B7D;
+  --plum:#7A1F44;
+  --ember:#E9C16C;
+  --rule:#1c1815;
+  --display:"Fraunces",Georgia,serif;
+  --body:"Inter Tight",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--ink);color:var(--paper);
+  font-family:var(--body);font-size:clamp(.95rem,.55rem + .8vw,1.05rem);
+  line-height:1.55;letter-spacing:.005em;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:1;
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(213,43,125,.10), transparent 40%),
+    radial-gradient(circle at 80% 90%, rgba(233,193,108,.06), transparent 45%);
+  mix-blend-mode:screen;
+}
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.06;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.95  0 0 0 0 0.92  0 0 0 0 0.86  0 0 0 1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+h1,h2,h3,h4{font-family:var(--display);font-weight:700;line-height:.95;letter-spacing:-.02em;text-wrap:balance;margin:0}
+p{margin:0;text-wrap:pretty;hyphens:auto}
+a{color:inherit;text-decoration:none}
+a.link{
+  background-image:linear-gradient(currentColor,currentColor);
+  background-size:100% 1px;background-repeat:no-repeat;background-position:0 100%;
+  padding-bottom:.05em;transition:background-size .35s ease;
+}
+a.link:hover{background-size:0 1px;background-position:100% 100%}
+.wrap{max-width:1280px;margin-inline:auto;padding-inline:clamp(1.1rem,3vw,2.5rem);position:relative;z-index:3}
+hr.rule{border:0;border-top:1px solid var(--rule);margin:0}
+
+/* ───────── status pill / nav ───────── */
+.bar{
+  position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);
+  background:linear-gradient(to bottom,rgba(12,9,8,.92),rgba(12,9,8,.78));
+  border-bottom:1px solid var(--rule);
+}
+.bar__row{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding-block:.85rem;
+}
+.brand{
+  font-family:var(--display);font-weight:900;font-size:1.15rem;
+  letter-spacing:.01em;
+}
+.brand i{font-style:italic;color:var(--magenta);font-weight:700}
+.status{
+  display:inline-flex;align-items:center;gap:.55rem;
+  font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
+  padding:.45rem .8rem;border:1px solid var(--rule);border-radius:999px;
+  color:var(--paper-warm);
+}
+.status::before{
+  content:"";width:.5rem;height:.5rem;border-radius:999px;background:var(--magenta);
+  box-shadow:0 0 0 0 rgba(213,43,125,.5);animation:pulse 2.2s infinite;
+}
+.status.closed::before{background:var(--ember);animation:none;box-shadow:none}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(213,43,125,.55)}
+  70%{box-shadow:0 0 0 .55rem rgba(213,43,125,0)}
+  100%{box-shadow:0 0 0 0 rgba(213,43,125,0)}
+}
+.order-cta{
+  font-family:var(--body);font-weight:600;font-size:.85rem;
+  letter-spacing:.06em;text-transform:uppercase;
+  padding:.7rem 1.05rem;background:var(--magenta);color:#fff;
+  border-radius:2px;transition:transform .25s ease,background .25s ease;
+  white-space:nowrap;
+}
+.order-cta:hover{background:var(--plum);transform:translateY(-1px)}
+nav.bar__nav{display:none;gap:1.6rem;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--paper-warm)}
+nav.bar__nav a:hover{color:var(--magenta)}
+@media(min-width:780px){nav.bar__nav{display:flex}}
+
+/* ───────── masthead ───────── */
+.masthead{padding:clamp(2.2rem,5vw,4.5rem) 0 clamp(1.4rem,3vw,2rem)}
+.kicker{
+  font-family:var(--body);font-size:.78rem;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--magenta);font-weight:600;
+}
+.kicker span{color:var(--paper-warm);opacity:.55;margin-inline:.5em}
+.title{
+  font-family:var(--display);font-weight:900;
+  font-size:clamp(3.8rem,14vw,12rem);line-height:.84;letter-spacing:-.045em;
+  margin-top:.8rem;
+  font-variation-settings:"opsz" 144,"SOFT" 40;
+}
+.title em{
+  font-style:italic;font-weight:700;color:var(--magenta);
+  font-variation-settings:"opsz" 144,"SOFT" 80;
+  display:block;
+}
+.lede{
+  display:grid;grid-template-columns:1fr;gap:1.4rem;
+  margin-top:clamp(1.8rem,4vw,2.8rem);
+  padding-top:1.6rem;border-top:1px solid var(--rule);
+}
+.lede__copy{font-family:var(--display);font-weight:400;font-size:clamp(1.15rem,1.6vw,1.55rem);line-height:1.35;max-width:46ch;letter-spacing:-.005em;color:#F0E5D2}
+.lede__copy em{color:var(--magenta);font-style:italic}
+.lede__meta{font-size:.85rem;color:var(--paper-warm);letter-spacing:.02em}
+.lede__meta dt{font-family:var(--body);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ember);margin-bottom:.3rem;font-weight:500}
+.lede__meta dd{margin:0 0 1.1rem 0;font-family:var(--display);font-size:1.05rem;line-height:1.4}
+@media(min-width:780px){
+  .lede{grid-template-columns:1.5fr 1fr;gap:3rem;align-items:end}
+}
+
+/* ───────── marquee ───────── */
+.marquee{
+  overflow:hidden;border-block:1px solid var(--rule);
+  padding-block:1.4rem;background:#0a0706;
+}
+.marquee__track{
+  display:inline-flex;gap:3.2rem;white-space:nowrap;
+  animation:scroll 38s linear infinite;will-change:transform;
+}
+.marquee__item{
+  font-family:var(--display);font-weight:700;font-style:italic;
+  font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.02em;color:var(--paper);
+  font-variation-settings:"opsz" 144;
+}
+.marquee__item:nth-child(odd){color:var(--magenta)}
+.marquee__dot{color:var(--ember);font-style:normal}
+@keyframes scroll{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marquee__track{animation:none}}
+
+/* ───────── sections ───────── */
+.section{padding-block:clamp(3rem,7vw,5.5rem)}
+.section--paper{background:var(--paper);color:var(--ink)}
+.section--paper h1,.section--paper h2,.section--paper h3{color:var(--ink)}
+.section--paper .label{color:var(--plum)}
+.section--paper hr{border-color:rgba(12,9,8,.18)}
+
+.label{
+  font-family:var(--body);font-size:.74rem;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--magenta);font-weight:600;
+  display:flex;align-items:center;gap:.8rem;margin-bottom:1.8rem;
+}
+.label::after{content:"";flex:1;height:1px;background:currentColor;opacity:.4;max-width:6rem}
+
+/* ───────── hours ───────── */
+.hours{
+  display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:start;
+}
+@media(min-width:780px){.hours{grid-template-columns:1fr 1.3fr;gap:4rem}}
+.hours__head{
+  font-family:var(--display);font-size:clamp(2.2rem,5vw,3.8rem);line-height:.95;
+  font-weight:700;letter-spacing:-.025em;
+}
+.hours__head em{font-style:italic;color:var(--magenta)}
+.hours__sub{margin-top:1rem;font-size:.95rem;color:#5a4e3f;max-width:32ch}
+.hours__list{
+  list-style:none;padding:0;margin:0;
+  font-family:var(--display);font-size:clamp(1.1rem,1.8vw,1.45rem);
+}
+.hours__list li{
+  display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:1.4rem;
+  padding-block:.85rem;border-bottom:1px dashed rgba(12,9,8,.22);
+}
+.hours__list li:last-child{border-bottom:none}
+.hours__list li[data-today]{
+  color:var(--magenta);font-style:italic;font-weight:700;
+}
+.hours__list li[data-closed] span:last-child{color:#9a8a7a;font-style:italic}
+.hours__list .day{letter-spacing:.005em}
+.hours__list .when{font-variant-numeric:tabular-nums;font-weight:500}
+
+/* ───────── what we cook ───────── */
+.menu-grid{
+  display:grid;grid-template-columns:1fr;gap:1.4rem;
+}
+@media(min-width:680px){.menu-grid{grid-template-columns:repeat(2,1fr);gap:1.6rem}}
+@media(min-width:1024px){.menu-grid{grid-template-columns:repeat(3,1fr)}}
+.cat{
+  background:#100c0a;border:1px solid var(--rule);padding:1.6rem 1.4rem 1.4rem;
+  display:flex;flex-direction:column;gap:.7rem;
+  transition:border-color .3s ease,transform .3s ease;
+}
+.cat:hover{border-color:var(--magenta);transform:translateY(-2px)}
+.cat__num{
+  font-family:var(--body);font-size:.72rem;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--ember);font-weight:500;
+}
+.cat__name{
+  font-family:var(--display);font-size:1.6rem;line-height:1;letter-spacing:-.015em;
+  font-weight:700;
+}
+.cat__name em{font-style:italic;color:var(--magenta)}
+.cat__body{font-size:.92rem;color:var(--paper-warm);line-height:1.5}
+
+/* ───────── visit ───────── */
+.visit{
+  display:grid;grid-template-columns:1fr;gap:2.5rem;
+}
+@media(min-width:880px){.visit{grid-template-columns:1.3fr 1fr;gap:4rem}}
+.visit__head{
+  font-family:var(--display);font-size:clamp(2.4rem,5.5vw,4.2rem);
+  line-height:.95;letter-spacing:-.025em;font-weight:700;
+}
+.visit__head em{font-style:italic;color:var(--ember)}
+.visit__sub{margin-top:1.1rem;font-size:1rem;color:var(--paper-warm);max-width:42ch;line-height:1.55}
+.address-card{
+  background:#100c0a;border:1px solid var(--rule);padding:1.8rem;
+}
+.address-card .pin{
+  font-family:var(--body);font-size:.7rem;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--magenta);font-weight:600;margin-bottom:1rem;
+}
+.address-card .addr{
+  font-family:var(--display);font-size:1.45rem;line-height:1.3;font-weight:400;
+}
+.address-card .addr em{font-style:italic;font-weight:700;color:var(--paper);display:block;font-size:1.6rem;margin-bottom:.4rem}
+.address-card hr{margin-block:1.3rem}
+.address-card .links{display:flex;flex-direction:column;gap:.5rem;font-size:.9rem}
+.address-card .links a{color:var(--ember);letter-spacing:.04em}
+.address-card .links a:hover{color:var(--magenta)}
+
+/* ───────── footer ───────── */
+footer{
+  padding-block:clamp(2.5rem,6vw,4rem);
+  border-top:1px solid var(--rule);
+  background:#080605;
+}
+.footer-grid{
+  display:grid;grid-template-columns:1fr;gap:2.4rem;
+}
+@media(min-width:780px){.footer-grid{grid-template-columns:2fr 1fr 1fr;gap:3rem}}
+.footer-mark{
+  font-family:var(--display);font-weight:900;font-style:italic;
+  font-size:clamp(2.8rem,7vw,5rem);line-height:.85;letter-spacing:-.03em;
+  color:var(--paper);
+}
+.footer-mark span{color:var(--magenta);display:block}
+.footer-sub{margin-top:1.2rem;font-size:.9rem;color:#9c8b78;max-width:34ch;line-height:1.5}
+.footer-col h4{
+  font-family:var(--body);font-size:.74rem;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--ember);font-weight:600;margin-bottom:1rem;
+}
+.footer-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.55rem;font-family:var(--display);font-size:1.05rem}
+.colophon{
+  margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--rule);
+  display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;
+  font-size:.78rem;color:#6b5d4f;letter-spacing:.02em;
+}
+
+/* ───────── scroll reveal ───────── */
+@supports (animation-timeline:view()){
+  .reveal{
+    animation:rise both;
+    animation-timeline:view();
+    animation-range:entry 5% cover 30%;
+  }
+  @keyframes rise{
+    from{opacity:0;transform:translateY(1.4rem)}
+    to{opacity:1;transform:translateY(0)}
+  }
+}
+@media(prefers-reduced-motion:reduce){.reveal{animation:none !important;opacity:1 !important;transform:none !important}}
+</style>
+</head>
+<body>
+
+<!-- ───────── top bar ───────── -->
+<header class="bar">
+  <div class="wrap bar__row">
+    <a href="#top" class="brand">Arthurs <i>China City</i></a>
+    <nav class="bar__nav" aria-label="Primary">
+      <a href="#hours">Hours</a>
+      <a href="#cook">What we cook</a>
+      <a href="#visit">Find us</a>
+    </nav>
+    <a class="order-cta" href="https://www.arthurs-chinacity.co.uk/" rel="noopener">Order online</a>
+  </div>
+</header>
+
+<!-- ───────── masthead ───────── -->
+<section id="top" class="wrap masthead">
+  <p class="kicker">Chinese takeaway <span>·</span> Est. on Desborough Road <span>·</span> HP11</p>
+  <h1 class="title">Arthurs<em>China&nbsp;City.</em></h1>
+
+  <div class="lede">
+    <p class="lede__copy">
+      A long-standing Chinese takeaway at <em>182 Desborough Road</em>, doing what a great neighbourhood takeaway should — sweet &amp; sour pork balls, chicken chow mein, the lot. Open evenings, six nights a week. Wednesdays we&rsquo;re closed.
+    </p>
+    <dl class="lede__meta">
+      <dt>Tonight</dt>
+      <dd id="tonightLine">Loading the kitchen rota…</dd>
+      <dt>Find us</dt>
+      <dd>182 Desborough Road<br>High Wycombe HP11 2QA</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- ───────── marquee ───────── -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span class="marquee__item">Sweet &amp; Sour Pork Balls</span><span class="marquee__item marquee__dot">·</span>
+    <span class="marquee__item">Chicken Chow Mein</span><span class="marquee__item marquee__dot">·</span>
+    <span class="marquee__item">Salt &amp; Pepper</span><span class="marquee__item marquee__dot">·</span>
+    <span class="marquee__item">Crispy Duck</span><span class="marquee__item marquee__dot">·</span>
+    <span class="marquee__item">Prawn Crackers</span><span class="marquee__item marquee__dot">·</span>
+    <span class="marquee__item">Black Bean</span><span class="marquee__item marquee__dot">·</span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee__item">Sweet &amp; Sour Pork Balls</span><span class="marquee__item marquee__dot">·</span>
+    <span class="marquee__item">Chicken Chow Mein</span><span class="marquee__item marquee__dot">·</span>
+    <span class="marquee__item">Salt &amp; Pepper</span><span class="marquee__item marquee__dot">·</span>
+    <span class="marquee__item">Crispy Duck</span><span class="marquee__item marquee__dot">·</span>
+    <span class="marquee__item">Prawn Crackers</span><span class="marquee__item marquee__dot">·</span>
+    <span class="marquee__item">Black Bean</span><span class="marquee__item marquee__dot">·</span>
+  </div>
+</div>
+
+<!-- ───────── hours (paper section) ───────── -->
+<section id="hours" class="section section--paper">
+  <div class="wrap">
+    <p class="label">Opening hours</p>
+    <div class="hours reveal">
+      <div>
+        <h2 class="hours__head">Evenings, <em>six&nbsp;nights</em> a week.</h2>
+        <p class="hours__sub">The kitchen runs from four in the afternoon. Wednesdays we shut so everyone gets a night off. Sundays we start a little later, finish a little earlier.</p>
+      </div>
+      <ul class="hours__list" id="hoursList">
+        <li data-day="1"><span class="day">Monday</span><span class="when">4:00 — 10:00pm</span></li>
+        <li data-day="2"><span class="day">Tuesday</span><span class="when">4:00 — 10:00pm</span></li>
+        <li data-day="3" data-closed><span class="day">Wednesday</span><span class="when">Closed</span></li>
+        <li data-day="4"><span class="day">Thursday</span><span class="when">4:00 — 10:00pm</span></li>
+        <li data-day="5"><span class="day">Friday</span><span class="when">4:00 — 10:30pm</span></li>
+        <li data-day="6"><span class="day">Saturday</span><span class="when">4:00 — 10:30pm</span></li>
+        <li data-day="0"><span class="day">Sunday</span><span class="when">5:00 — 9:30pm</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── what we cook ───────── -->
+<section id="cook" class="section">
+  <div class="wrap">
+    <p class="label">What we cook</p>
+    <div class="menu-grid">
+      <article class="cat reveal">
+        <span class="cat__num">No. 01</span>
+        <h3 class="cat__name">Sweet &amp; <em>sour</em></h3>
+        <p class="cat__body">Pork balls, chicken balls, king prawn — battered, tossed, with that bright red house sauce on the side. The thing High Wycombe&rsquo;s been ordering on Friday nights since forever.</p>
+      </article>
+      <article class="cat reveal">
+        <span class="cat__num">No. 02</span>
+        <h3 class="cat__name">Chow mein &amp; <em>noodles</em></h3>
+        <p class="cat__body">Chicken, beef, prawn, mixed, special. Soft noodles, the right amount of beansprout, a fistful of spring onion. Tossed hard, served fast.</p>
+      </article>
+      <article class="cat reveal">
+        <span class="cat__num">No. 03</span>
+        <h3 class="cat__name">Rice &amp; <em>fried rice</em></h3>
+        <p class="cat__body">Boiled, egg fried, special fried, singapore. The egg fried gets ordered with almost everything that leaves the building.</p>
+      </article>
+      <article class="cat reveal">
+        <span class="cat__num">No. 04</span>
+        <h3 class="cat__name">Curry &amp; <em>black bean</em></h3>
+        <p class="cat__body">House curry sauce, satay, black bean, oyster sauce. Saucy, generous, the sort of thing you want against a cold High Wycombe evening.</p>
+      </article>
+      <article class="cat reveal">
+        <span class="cat__num">No. 05</span>
+        <h3 class="cat__name">Salt &amp; <em>pepper</em></h3>
+        <p class="cat__body">Chips, ribs, chicken, squid. Fried hot, hit with chilli, onion and pepper from the wok. Crackle &amp; heat in the bottom of a foil tray.</p>
+      </article>
+      <article class="cat reveal">
+        <span class="cat__num">No. 06</span>
+        <h3 class="cat__name">Crispy <em>duck</em></h3>
+        <p class="cat__body">Quarter, half, or whole. Pancakes, hoisin, cucumber, spring onion. The dish you order for the table, eaten standing in the kitchen.</p>
+      </article>
+    </div>
+    <p style="margin-top:2.4rem;font-size:.92rem;color:var(--paper-warm);max-width:50ch">
+      Full menu — and online ordering for collection or delivery — runs through our shop page.
+      <a class="link" href="https://www.arthurs-chinacity.co.uk/" rel="noopener">View the full menu →</a>
+    </p>
+  </div>
+</section>
+
+<!-- ───────── visit ───────── -->
+<section id="visit" class="section">
+  <div class="wrap">
+    <p class="label">Find us</p>
+    <div class="visit reveal">
+      <div>
+        <h2 class="visit__head">A shop on <em>Desborough Road</em>,<br>open when the evening starts.</h2>
+        <p class="visit__sub">Walk in, ring through the bell, or order online for collection or delivery. We&rsquo;re in the Desborough Road parade in the HP11 end of High Wycombe — the kind of shop you&rsquo;ve passed a hundred times and finally tried.</p>
+      </div>
+      <aside class="address-card">
+        <p class="pin">Where</p>
+        <p class="addr">
+          <em>Arthurs China City</em>
+          182 Desborough Road<br>
+          High Wycombe<br>
+          HP11 2QA
+        </p>
+        <hr class="rule">
+        <div class="links">
+          <a class="link" href="https://www.google.com/maps/search/?api=1&query=Arthurs+China+City+182+Desborough+Road+High+Wycombe+HP11+2QA" rel="noopener">Open in Google Maps →</a>
+          <a class="link" href="https://www.arthurs-chinacity.co.uk/" rel="noopener">Order for collection or delivery →</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── footer ───────── -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-mark">Arthurs<span>China City.</span></p>
+        <p class="footer-sub">Chinese takeaway on Desborough Road, High Wycombe. Six evenings a week. Wednesdays we&rsquo;re closed.</p>
+      </div>
+      <div class="footer-col">
+        <h4>The shop</h4>
+        <ul>
+          <li>182 Desborough Road</li>
+          <li>High Wycombe</li>
+          <li>HP11 2QA</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>This week</h4>
+        <ul>
+          <li>Mon — Tue · 4 — 10pm</li>
+          <li>Wed · Closed</li>
+          <li>Thu · 4 — 10pm</li>
+          <li>Fri — Sat · 4 — 10:30pm</li>
+          <li>Sun · 5 — 9:30pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© Arthurs China City · HP11 2QA</span>
+      <span><a class="link" href="https://www.arthurs-chinacity.co.uk/" rel="noopener">arthurs-chinacity.co.uk</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Today highlighting + open/closed pill — local-time, no external deps */
+(function(){
+  const HOURS = {
+    0:{open:'17:00',close:'21:30',label:'Sun 5 — 9:30pm'},
+    1:{open:'16:00',close:'22:00',label:'Mon 4 — 10pm'},
+    2:{open:'16:00',close:'22:00',label:'Tue 4 — 10pm'},
+    3:null,
+    4:{open:'16:00',close:'22:00',label:'Thu 4 — 10pm'},
+    5:{open:'16:00',close:'22:30',label:'Fri 4 — 10:30pm'},
+    6:{open:'16:00',close:'22:30',label:'Sat 4 — 10:30pm'}
+  };
+  const DAY_NAMES = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const now = new Date();
+  const dow = now.getDay();
+  const today = HOURS[dow];
+
+  // highlight today's row in the hours list
+  const todayRow = document.querySelector(`#hoursList li[data-day="${dow}"]`);
+  if(todayRow) todayRow.setAttribute('data-today','');
+
+  // build status pill into the top bar
+  const bar = document.querySelector('.bar__row');
+  if(bar){
+    const pill = document.createElement('span');
+    pill.className = 'status';
+    let label = '';
+    if(!today){
+      pill.classList.add('closed');
+      // next open day
+      let d = dow;
+      for(let i=1;i<=7;i++){
+        d = (dow+i)%7;
+        if(HOURS[d]){ label = 'Closed · opens ' + DAY_NAMES[d].slice(0,3) + ' 4pm'; break; }
+      }
+    } else {
+      const [oH,oM] = today.open.split(':').map(Number);
+      const [cH,cM] = today.close.split(':').map(Number);
+      const mins = now.getHours()*60 + now.getMinutes();
+      const openM = oH*60+oM, closeM = cH*60+cM;
+      if(mins < openM){
+        label = 'Closed · opens today at ' + today.open.replace(/^0/,'');
+        pill.classList.add('closed');
+      } else if(mins >= closeM){
+        // find next
+        let d = dow;
+        for(let i=1;i<=7;i++){
+          d = (dow+i)%7;
+          if(HOURS[d]){ label = 'Closed · opens ' + DAY_NAMES[d].slice(0,3) + ' 4pm'; break; }
+        }
+        pill.classList.add('closed');
+      } else {
+        const ch = today.close.replace(/^0/,'');
+        label = 'Open · until ' + ch;
+      }
+    }
+    pill.textContent = label;
+    // insert before the order-cta
+    const cta = bar.querySelector('.order-cta');
+    bar.insertBefore(pill, cta);
+  }
+
+  // tonight line in lede
+  const t = document.getElementById('tonightLine');
+  if(t){
+    if(!today){
+      // find next open day
+      let d = dow;
+      for(let i=1;i<=7;i++){
+        d = (dow+i)%7;
+        if(HOURS[d]){ t.textContent = 'Closed today — back ' + HOURS[d].label + '.'; break; }
+      }
+    } else {
+      t.textContent = today.label + '.';
+    }
+  }
+})();
+</script>
+</body>
+</html>
